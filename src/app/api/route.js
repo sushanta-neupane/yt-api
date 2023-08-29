@@ -18,4 +18,5 @@ export const GET =  async(req) => {
     }
 }
 
+export const dynamic = 'force-dynamic'
 
