@@ -1,6 +1,10 @@
 This is youtube api
 
 Refrence:
-https://apibeatwave.vercel.app/api?q=query&max=maxResult
+baseURL : https://apibeatwave.vercel.app/
 
-replace query with your_query and maxResult the number of response
+/api?q=query&max=maxResult
+replace query with your_query and maxResult with the number of response you want
+
+/api/videoId
+replace videoId with video id
