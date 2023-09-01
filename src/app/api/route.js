@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import axios from 'axios'
 
-
 export const GET =  async(req) => {
     try {
   
