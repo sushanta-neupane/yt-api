@@ -17,7 +17,7 @@ export const GET =  async(req) => {
         return new NextResponse(JSON.stringify(data['data']))
         
     } catch (error) {
-        console.log("ERROR fetching  \n" + error)
+        return new NextResponse(JSON.stringify({error : error,"message":"enter valid id"}));
     }
 }
 

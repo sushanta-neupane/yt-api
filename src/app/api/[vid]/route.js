@@ -42,7 +42,7 @@ export const GET = async (req) => {
 
     return new NextResponse(JSON.stringify(allData));
   } catch (error) {
-    console.log("ERROR fetching  \n" + error);
+    return new NextResponse(JSON.stringify({error : error,"message":"enter valid id"}));
   }
 };
 
