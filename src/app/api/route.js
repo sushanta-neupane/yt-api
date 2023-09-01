@@ -1,28 +1,9 @@
 import { NextResponse } from "next/server";
 import axios from 'axios'
-import Cors from 'cors'
 
-const cors = Cors({
-    methods: ['GET'],
-    origin: '*', 
-    optionsSuccessStatus: 200
-  })
-  
-  function runMiddleware(req, res, fn) {
-    return new Promise((resolve, reject) => {
-      fn(req, res, (result) => {
-        if (result instanceof Error) {
-          return reject(result)
-        }
-  
-        return resolve(result)
-      })
-    })
-  }
 
 export const GET =  async(req) => {
     try {
-        await runMiddleware(req,res,cors)
   
         const apiKey = process.env.API_KEY
         const res = req.url.split("?");

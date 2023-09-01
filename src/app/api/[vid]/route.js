@@ -1,29 +1,10 @@
 import { NextResponse } from "next/server";
-import Cors from 'cors'
+
 import ytdl from "ytdl-core";
 
-
-const cors = Cors({
-  methods: ['GET'],
-  origin: '*', 
-  optionsSuccessStatus: 200
-})
-
-function runMiddleware(req, res, fn) {
-  return new Promise((resolve, reject) => {
-    fn(req, res, (result) => {
-      if (result instanceof Error) {
-        return reject(result)
-      }
-
-      return resolve(result)
-    })
-  })
-}
-
-export const GET = async (req,res) => {
+// GET => get all products
+export const GET = async (req) => {
   try {
-    await runMiddleware(req,res,cors)
     const reqUrl = req.url.split("/");
     const vid = reqUrl[reqUrl.length - 1];
     const info = await ytdl.getInfo(vid);
