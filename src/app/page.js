@@ -7,7 +7,7 @@ export default function Home() {
 
       This is youtube api. Go to /api to use the feature.
       </card>
-      <a href='/api'>- Go -</a>
+      <a href='/api?q=sample&max=0'>- Go -</a>
     </main>
   )
 }
